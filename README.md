@@ -96,7 +96,7 @@ An interactive dashboard was built in **Power BI** to visualize healthcare insig
 
 ## Dashboard Preview
 
-![Healthcare Dashboard]("dashboard.png")
+![Healthcare Dashboard](dashboard.png)
 
 ---
 
