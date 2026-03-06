@@ -1,90 +1,147 @@
-# Healthcare-Data-Analysis
-Healthcare Patient Analytics Dashboard
-Project Overview
+# Healthcare Data Analysis Project
 
-This project analyzes healthcare patient data to understand hospital admissions, medical conditions, insurance coverage, and billing patterns.
+## Project Overview
+This project analyzes healthcare patient data to identify patterns in hospital admissions, medical conditions, insurance coverage, and billing trends.
 
-The project demonstrates data cleaning, exploratory data analysis, and dashboard visualization.
+The goal of the project is to demonstrate an end-to-end **data analytics workflow**, including data cleaning, exploratory data analysis (EDA), and dashboard development.
 
-Tools Used
+---
 
-SQL (Data Cleaning)
+## Tools & Technologies Used
 
-Python (Pandas, Matplotlib, Seaborn)
+- **SQL** – Data cleaning and validation
+- **Python** – Exploratory Data Analysis
+- **Pandas** – Data manipulation
+- **Matplotlib & Seaborn** – Data visualization
+- **Power BI** – Interactive dashboard creation
 
-Power BI (Dashboard Visualization)
+---
 
-Dataset
+## Dataset
 
-The dataset contains 55,500 healthcare records including:
+The dataset contains **55,500 healthcare records** with the following attributes:
 
-Patient demographics
+- Patient Name
+- Age
+- Gender
+- Blood Type
+- Medical Condition
+- Date of Admission
+- Doctor
+- Hospital
+- Insurance Provider
+- Billing Amount
+- Room Number
+- Admission Type
+- Discharge Date
+- Medication
+- Test Results
 
-Medical conditions
+---
 
-Admission details
+## Data Cleaning (SQL)
 
-Billing information
+The following cleaning steps were performed using SQL:
 
-Insurance providers
-
-Data Cleaning Steps
-
-Performed using SQL:
-
-Removed duplicate records
-
-Standardized admission type categories
-
-Corrected negative billing values
-
-Verified date consistency
-
-Prepared cleaned dataset for analysis
+- Removed **534 duplicate records**
+- Standardized **Admission Type categories**
+- Corrected **negative billing values**
+- Verified **date consistency between admission and discharge**
+- Created a cleaned dataset for analysis
 
 Final dataset size:
 
-54,966 records
-Exploratory Data Analysis
+**54,966 records**
 
-Using Python:
+---
 
-Patient age distribution
+## Exploratory Data Analysis (Python)
 
-Gender distribution
+EDA was performed using Python to explore patient demographics and healthcare trends.
 
-Medical condition frequency
+Key analyses included:
 
-Hospital billing trends
+- Patient **age distribution**
+- **Gender distribution**
+- **Medical condition frequency**
+- **Hospital billing trends**
+- **Insurance provider analysis**
 
-Insurance provider analysis
+### Feature Engineering
+A new feature was created:
 
-Feature Engineering:
+**Stay_Days**
 
-Created Stay_Days column using admission and discharge dates.
+Calculated using:
+Stay_Days = Discharge_Date - Date_of_Admission
 
-Dashboard Insights
+This feature helps analyze **average hospital stay duration**.
 
-Key findings:
+---
 
-Emergency admissions represent the majority of hospital visits.
+## Power BI Dashboard
 
-Average hospital stay is approximately 15.5 days.
+An interactive dashboard was built in **Power BI** to visualize healthcare insights.
 
-Certain hospitals generate significantly higher billing.
+### Dashboard Features
 
-Insurance providers like Blue Cross and Medicare cover a large share of costs.
+- Key performance indicators (KPIs)
+- Patient demographics analysis
+- Medical condition distribution
+- Hospital billing insights
+- Insurance provider analysis
+- Interactive filters (slicers)
 
-Dashboard Preview
+---
 
-(Add your screenshot here)
+## Dashboard Preview
 
-![Dashboard](images/dashboard.png)
+![Healthcare Dashboard]("dashboard.png")
 
-Future Improvements
+---
 
-Predict patient length of stay using machine learning
+## Key Insights
 
-Analyze seasonal hospital admission trends
+- **Emergency admissions account for the majority of patient visits**
+- The **average hospital stay is approximately 15.5 days**
+- Certain hospitals generate significantly **higher billing revenue**
+- Insurance providers such as **Blue Cross and Medicare cover the largest share of healthcare costs**
 
-Build a real-time healthcare analytics dashboard
+---
+
+## Project Structure
+Healthcare-Data-Analysis
+│
+├── dataset
+│ └── healthcare_final.csv
+│
+├── sql
+│ └── data_cleaning.sql
+│
+├── notebook
+│ └── healthcare_eda.ipynb
+│
+├── dashboard
+│ └── healthcare_dashboard.pbix
+│
+├── images
+│ └── dashboard.png
+│
+└── README.md
+
+---
+
+## Future Improvements
+
+Possible future extensions of this project:
+
+- Predict **patient length of stay using machine learning**
+- Analyze **seasonal hospital admission trends**
+- Develop a **real-time healthcare analytics dashboard**
+
+---
+
+## Author
+
+Dhruv Mittal  
+MCA (Data Science) Student  
